@@ -5,16 +5,16 @@ using Zenject;
 
 public class GameController : MonoBehaviour
 {
-    [Inject] Player player;
+    //[Inject]Enemy.EnemySettings enemy;
+    //[Inject] Player player;
     // Start is called before the first frame update
+    [Inject]
+    IAudioController audioController;
     void Start()
     {
-        Debug.Log(player.GetLocation());
+        //Debug.Log(enemy.Speed);
+        //Debug.Log(player.GetLocation());
+        audioController.playDead();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
         
-    }
 }

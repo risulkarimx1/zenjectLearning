@@ -9,8 +9,8 @@ public class GameInstaller : MonoInstaller
 
     public override void InstallBindings()
     {
-        Container.Bind<Player>().
-            FromComponentInNewPrefab(_playerPrefab).AsTransient();
+        SimpleInstaller.Install(Container, _playerPrefab);
+        
     }
    
 }
